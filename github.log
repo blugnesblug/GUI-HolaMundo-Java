@@ -1,0 +1,108 @@
+miguel@ocaso:~/eclipse/Graphical$ git status
+fatal: no es un repositorio git ( o ningún padre en el punto de montado /)
+Parando en el límite del sistema de archivos (GIT_DISCOVERY_ACROSS_FILESYSTEM no establecido).
+miguel@ocaso:~/eclipse/Graphical$ git init
+Inicializado repositorio Git vacío en /home/miguel/eclipse/Graphical/.git/
+miguel@ocaso:~/eclipse/Graphical$ git status
+En la rama master
+
+No hay commits todavía
+
+Archivos sin seguimiento:
+  (usa "git add <archivo>..." para incluirlo a lo que se será confirmado)
+
+	src/
+
+no hay nada agregado al commit pero hay archivos sin seguimiento presentes (usa "git add" para hacerles seguimiento)
+miguel@ocaso:~/eclipse/Graphical$ nano README.md
+miguel@ocaso:~/eclipse/Graphical$ git status
+En la rama master
+
+No hay commits todavía
+
+Archivos sin seguimiento:
+  (usa "git add <archivo>..." para incluirlo a lo que se será confirmado)
+
+	README.md
+	src/
+
+no hay nada agregado al commit pero hay archivos sin seguimiento presentes (usa "git add" para hacerles seguimiento)
+miguel@ocaso:~/eclipse/Graphical$ git add 
+README.md  src/       
+miguel@ocaso:~/eclipse/Graphical$ git add 
+README.md  src/       
+miguel@ocaso:~/eclipse/Graphical$ git add src
+miguel@ocaso:~/eclipse/Graphical$ git status
+En la rama master
+
+No hay commits todavía
+
+Cambios a ser confirmados:
+  (usa "git rm --cached <archivo>..." para sacar del área de stage)
+
+	nuevo archivo:  src/NA/Display.java
+	nuevo archivo:  src/NA/Launcher.java
+
+Archivos sin seguimiento:
+  (usa "git add <archivo>..." para incluirlo a lo que se será confirmado)
+
+	README.md
+
+miguel@ocaso:~/eclipse/Graphical$ git add .
+miguel@ocaso:~/eclipse/Graphical$ git status
+En la rama master
+
+No hay commits todavía
+
+Cambios a ser confirmados:
+  (usa "git rm --cached <archivo>..." para sacar del área de stage)
+
+	nuevo archivo:  README.md
+	nuevo archivo:  src/NA/Display.java
+	nuevo archivo:  src/NA/Launcher.java
+
+miguel@ocaso:~/eclipse/Graphical$ git commit -m "First lines of code"
+[master (commit-raíz) 3f399de] First lines of code
+ 3 files changed, 40 insertions(+)
+ create mode 100644 README.md
+ create mode 100644 src/NA/Display.java
+ create mode 100644 src/NA/Launcher.java
+miguel@ocaso:~/eclipse/Graphical$ git status
+En la rama master
+nada para hacer commit, el árbol de trabajo esta limpio
+miguel@ocaso:~/eclipse/Graphical$ git push
+fatal: No se ha configurado un destino para el push.
+Puedes o especificar una URL desde la línea de comandos o configurar un repositorio remoto usando
+
+    git remote add <nombre> <url>
+
+y luego haciendo push al nombre del remoto
+
+    git push <nombre>
+
+miguel@ocaso:~/eclipse/Graphical$ git remote add githuburl https://github.com/blugnesblug/GUI-HolaMundo-Java.git
+miguel@ocaso:~/eclipse/Graphical$ git push
+fatal: No se ha configurado un destino para el push.
+Puedes o especificar una URL desde la línea de comandos o configurar un repositorio remoto usando
+
+    git remote add <nombre> <url>
+
+y luego haciendo push al nombre del remoto
+
+    git push <nombre>
+
+miguel@ocaso:~/eclipse/Graphical$ git status
+En la rama master
+nada para hacer commit, el árbol de trabajo esta limpio
+miguel@ocaso:~/eclipse/Graphical$ git push githuburl master
+Username for 'https://github.com': makutok
+Password for 'https://makutok@github.com': 
+Contando objetos: 7, listo.
+Delta compression using up to 8 threads.
+Comprimiendo objetos: 100% (5/5), listo.
+Escribiendo objetos: 100% (7/7), 816 bytes | 408.00 KiB/s, listo.
+Total 7 (delta 0), reused 0 (delta 0)
+To https://github.com/blugnesblug/GUI-HolaMundo-Java.git
+ * [new branch]      master -> master
+miguel@ocaso:~/eclipse/Graphical$ 
+
